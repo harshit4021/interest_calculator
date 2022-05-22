@@ -4,7 +4,7 @@ const request=require ("request");
 const https=require("https");
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
-app.listen( 3000,function(){
+app.listen( process.env.PORT || 3000,function(){
   console.log("server started on port 3000");
 });
 app.post("/",function(req,res){
